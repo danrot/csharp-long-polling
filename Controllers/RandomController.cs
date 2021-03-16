@@ -13,7 +13,7 @@ namespace csharp_short_polling.Controllers
         [HttpGet]
         public object GetAction()
         {
-            Thread.Sleep(5000);
+            Thread.Sleep(random.Next(0, 10000));
             return new {
                 Random = random.Next(0, 100),
                 Created = DateTime.Now,
