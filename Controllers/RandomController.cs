@@ -13,6 +13,7 @@ namespace csharp_short_polling.Controllers
         [HttpGet]
         public object GetAction()
         {
+            // Instead sleeping some kind of mechanism to delay the response until new data is available should be used
             Thread.Sleep(random.Next(0, 10000));
             return new {
                 Random = random.Next(0, 100),
